@@ -1,0 +1,23 @@
+/* Global styles */
+:root {
+    --strng-cyan: rgb(38, 192, 171);
+    --dk-cyan: rgb(0, 73, 77);
+    --dk-gray-cyan: rgb(94, 122, 125);
+    --gray-cyan: rgb(127, 156, 159);
+    --lt-gray-cyan: rgb(197, 228, 231);
+    --v-lt-gray-cyan: rgb(244, 250, 250);
+    --white: rgb(255, 255, 255);
+}
+
+body, h1, h2, h3, h4, h5, h6, p,
+dl, dd, blockquote, figure {
+    margin: 0;
+}
+
+body {
+    font-family: "Space Mono";
+    font-size: 1.5rem;
+    color: var(--);
+}
+  
+/* Mobile styles */
