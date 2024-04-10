@@ -17,7 +17,7 @@ dl, dd, blockquote, figure {
 body {
     font-family: "Space Mono";
     font-size: 1.5rem;
-    color: var(--);
+    color: var(--dk-cyan);
 }
   
 /* Mobile styles */
