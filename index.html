@@ -10,55 +10,58 @@
 </head>
 <body>
   <main>
-    <img src="./images/logo.svg" alt="Splitter app company logo">
+    <img src="./images/logo.svg" class="logo" alt="Splitter app company logo">
 
     <section class="app">
 
       <section class="bill">
         <label for="bill" class="input-title">Bill</label>
-        <div class="bill-amount">
-          <img src="./images/icon-dollar.svg" alt="Dollar sign icon.">
+        <div class="icon-input">
+          <img src="./images/icon-dollar.svg" class="icon" alt="Dollar sign icon.">
           <input type="text" id="billField" class="input" name="bill">
         </div>
-        
       </section>
       
       <section class="tip">
         <h4 class="input-title">Select Tip %</h4>
-        <input type="button" class="btn" value="5%">
-        <input type="button" class="btn" value="10%">
-        <input type="button" class="btn" value="15%">
-        <input type="button" class="btn" value="25%">
-        <input type="button" class="btn" value="50%">
-        <input type="text" class="input custom" placeholder="Custom">
+        <div class="tip-amount-group">
+          <input type="button" class="btn" value="5%">
+          <input type="button" class="btn" value="10%">
+          <input type="button" class="btn" value="15%">
+          <input type="button" class="btn" value="25%">
+          <input type="button" class="btn" value="50%">
+          <input type="text" class="input custom" placeholder="Custom">
+        </div>
       </section>
 
       <section class="people">
         <label for="people" class="input-title">Number of People</label>
-        <div class="number-people">
-          <img src="./images/icon-person.svg" alt="">
+        <div class="icon-input">
+          <img src="./images/icon-person.svg" class="icon" alt="Person icon.">
           <input type="text" id="peopleField" class="input" name="people">
         </div>
       </section>
 
       <section class="tip-calc">
-        <div class="tip-amount-pp">
+        <div class="tip-amount-group">
           <div class="tip-amount-text">
             <h5 class="tip-title">Tip Amount</h5>
             <h6 class="tip-text">/ person</h6>
           </div>
-          <h2 class="tip-amount-pp-figure">$4.27</h2>
+          <h2 id="tipAmountPerPerson" class="cost-text">$4.27</h2>
         </div>
 
         <div class="tip-total-pp">
-          <div class="total-pp-text">
-            <h5 class="tip-title">Total</h5>
-            <h6 class="tip-text">/ person</h6>
+          <div class="tip-amount-group">
+            <div class="tip-amount-text">
+              <h5 class="tip-title">Total</h5>
+              <h6 class="tip-text">/ person</h6>
+            </div>
+            <h2 id="tipTotal" class="cost-text">$32.79</h2>
           </div>
-          <h2 class="tip-total-figure">$32.79</h2>
         </div>
 
-        <input type="button" class="btn" value="Reset">
+        <input type="button" class="btn inverse" value="Reset">
       </section>
 
     </section>
