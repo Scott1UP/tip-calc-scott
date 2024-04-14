@@ -36,6 +36,7 @@ main {
 .app {
     display: flex;
     flex-direction: column;
+    border-radius: 2rem;
     gap: 2rem;
     padding: 2rem;
     background: var(--white);
@@ -44,15 +45,23 @@ main {
 .bill {
     display: flex;
     flex-direction: column;
+    gap: .25rem;
+}
+
+.input-title {
+    font-size: 1rem;
+    color: var(--dk-gray-cyan);
 }
 
 .icon-input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 2px solid transparent;
+    box-sizing: border-box;
     gap: 2rem;
     align-items: center;
-    padding: .5rem 1rem;
+    padding: .25rem 1rem;
     border-radius: .5rem;
     background-color: var(--v-lt-gray-cyan);
 }
@@ -67,10 +76,15 @@ main {
     background: none;
     cursor: pointer;
     text-align: right;
+    outline: none;
     font-family: "Space Mono";
     width: 100%;
     font-size: 1.5rem;
     color: var(--dk-cyan);
+}
+
+.icon-input:hover {
+    border: 2px solid var(--strng-cyan);
 }
 
 .input::placeholder {
@@ -78,18 +92,21 @@ main {
 }
 
 .input.custom {
+    box-sizing: border-box;
     background-color: var(--v-lt-gray-cyan);
-    margin-right: 1rem;
+    border: 2px solid transparent;
+    padding-right: 1rem;
     border-radius: .25rem;
 }
 
-.input.custom::placeholder {
-    margin-right: 1rem;
+.input.custom:hover {
+    border: 2px solid var(--strng-cyan);
 }
 
 .tip {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .tip-amount-group {
@@ -110,12 +127,28 @@ main {
     color: var(--white);
 }
 
+.btn:hover {
+    background-color: var(--lt-gray-cyan);
+    color: var(--dk-cyan);
+}
+
+.btn:active {
+    background-color: var(--strng-cyan);
+}
+
+.number-of-people {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
 .tip-calc {
     display: flex;
     flex-direction: column;
+    border-radius: 1rem;
     gap: 1.5rem;
     background-color: var(--dk-cyan);
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .tip-amount-text {
@@ -125,20 +158,34 @@ main {
 
 .tip-title {
     color: var(--white);
+    font-size: 1rem;
 }
 
 .tip-text {
     color: var(--gray-cyan);
+    font-size: .835rem;
 }
 
 .cost-text {
     color: var(--strng-cyan);
+    font-size: 2rem;
+    text-align: right;
 }
 
 .btn.inverse {
     background-color: var(--strng-cyan);
     text-transform: uppercase;
     color: var(--dk-cyan);
+    font-size: 1.25rem;
+    padding: .5rem;
+}
+
+.btn.inverse:hover {
+    background-color: var(--lt-gray-cyan);
+}
+
+.btn.inverse:active {
+    background-color: var(--v-lt-gray-cyan);
 }
 
 
