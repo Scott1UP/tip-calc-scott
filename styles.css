@@ -188,6 +188,11 @@ main {
     background-color: var(--v-lt-gray-cyan);
 }
 
+.active {
+    background-color: var(--strng-cyan);
+    color: var(--dk-cyan);
+}
+
 
 
 
