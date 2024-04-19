@@ -23,7 +23,7 @@ tipButtons.forEach(button => {
     activeTipValue = event.target.value.replace("%", "");
 
     // Store the tipAmount
-    tipAmount = billAmount.value / activeTipValue;
+    tipAmount = billAmount.value * (activeTipValue / 100);
 
     // Transform the active tip value to a usable multiplier
     activeTipValue = activeTipValue / 100 + 1;
