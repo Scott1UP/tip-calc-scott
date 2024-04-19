@@ -115,7 +115,7 @@ main {
     gap: 1rem;
 }
 
-.btn {
+.tip-btn {
     background-color: var(--dk-cyan);
     border: none;
     border-radius: .25rem;
@@ -127,12 +127,12 @@ main {
     color: var(--white);
 }
 
-.btn:hover {
+.tip-btn:hover {
     background-color: var(--lt-gray-cyan);
     color: var(--dk-cyan);
 }
 
-.btn:active {
+.tip-btn:active {
     background-color: var(--strng-cyan);
 }
 
@@ -172,19 +172,28 @@ main {
     text-align: right;
 }
 
-.btn.inverse {
+
+.btn-inverse {
     background-color: var(--strng-cyan);
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    padding: .35rem;
+
+    font-family: "Space Mono";
+    font-size: 1.5rem;
+
     text-transform: uppercase;
     color: var(--dk-cyan);
     font-size: 1.25rem;
     padding: .5rem;
 }
 
-.btn.inverse:hover {
+.btn-inverse:hover {
     background-color: var(--lt-gray-cyan);
 }
 
-.btn.inverse:active {
+.btn-inverse:active {
     background-color: var(--v-lt-gray-cyan);
 }
 
