@@ -14,50 +14,56 @@
 
     <section class="app">
 
-      <section class="bill">
-        <label for="bill" class="input-title">Bill</label>
-        <div class="icon-input">
-          <img src="./images/icon-dollar.svg" class="icon" alt="Dollar sign icon.">
-          <input type="text" id="billField" class="input" name="bill">
-        </div>
+      <section class="input-content">
+
+        <section class="bill">
+          <label for="bill" class="input-title">Bill</label>
+          <div class="icon-input">
+            <img src="./images/icon-dollar.svg" class="icon" alt="Dollar sign icon.">
+            <input type="text" id="billField" class="input" name="bill">
+          </div>
+        </section>
+        
+        <section class="tip">
+          <h4 class="input-title">Select Tip %</h4>
+          <div class="tip-button-group">
+            <input type="button" class="tip-btn" value="5%">
+            <input type="button" class="tip-btn" value="10%">
+            <input type="button" class="tip-btn" value="15%">
+            <input type="button" class="tip-btn" value="25%">
+            <input type="button" class="tip-btn" value="50%">
+            <input type="text" id="custom-tip" class="input custom" placeholder="Custom">
+          </div>
+        </section>
+
+        <section class="number-of-people">
+          <label for="people" class="input-title">Number of People</label>
+          <div class="icon-input">
+            <img src="./images/icon-person.svg" class="icon" alt="Person icon.">
+            <input type="text" id="peopleField" class="input" name="people">
+          </div>
+        </section>
+        
       </section>
       
-      <section class="tip">
-        <h4 class="input-title">Select Tip %</h4>
-        <div class="tip-amount-group">
-          <input type="button" class="tip-btn" value="5%">
-          <input type="button" class="tip-btn" value="10%">
-          <input type="button" class="tip-btn" value="15%">
-          <input type="button" class="tip-btn" value="25%">
-          <input type="button" class="tip-btn" value="50%">
-          <input type="text" id="custom-tip" class="input custom" placeholder="Custom">
-        </div>
-      </section>
-
-      <section class="number-of-people">
-        <label for="people" class="input-title">Number of People</label>
-        <div class="icon-input">
-          <img src="./images/icon-person.svg" class="icon" alt="Person icon.">
-          <input type="text" id="peopleField" class="input" name="people">
-        </div>
-      </section>
-
       <section class="tip-calc">
-        <div class="tip-amount-group">
-          <div class="tip-amount-text">
-            <h5 class="tip-title">Tip Amount</h5>
-            <h6 class="tip-text">/ person</h6>
-          </div>
-          <h2 id="tipAmountPerPerson" class="cost-text">$0.00</h2>
-        </div>
-
-        <div class="total-pp">
+        <div class="amounts">
           <div class="tip-amount-group">
             <div class="tip-amount-text">
-              <h5 class="tip-title">Total</h5>
+              <h5 class="tip-title">Tip Amount</h5>
               <h6 class="tip-text">/ person</h6>
             </div>
-            <h2 id="total" class="cost-text">$0.00</h2>
+            <h2 id="tipAmountPerPerson" class="cost-text">$0.00</h2>
+          </div>
+
+          <div class="total-pp">
+            <div class="tip-amount-group">
+              <div class="tip-amount-text">
+                <h5 class="tip-title">Total</h5>
+                <h6 class="tip-text">/ person</h6>
+              </div>
+              <h2 id="total" class="cost-text">$0.00</h2>
+            </div>
           </div>
         </div>
 

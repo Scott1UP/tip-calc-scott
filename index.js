@@ -18,7 +18,7 @@ tipButtons.forEach(button => {
     // Remove the 'active' class from all buttons
     tipButtons.forEach(btn => btn.classList.remove("active"));
 
-    // Remove any previously inputted value from the custom input
+    // Remove the value from the custom input
     customTip.value = "";
 
     // Add the 'active' class to the clicked button

@@ -42,6 +42,12 @@ main {
     background: var(--white);
 }
 
+.input-content {
+    display: inherit;
+    flex-direction: column;
+    gap: inherit;
+}
+
 .bill {
     display: flex;
     flex-direction: column;
@@ -109,7 +115,7 @@ main {
     gap: 1rem;
 }
 
-.tip-amount-group {
+.tip-button-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -149,6 +155,18 @@ main {
     gap: 1.5rem;
     background-color: var(--dk-cyan);
     padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.amounts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tip-amount-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
 }
 
 .tip-amount-text {
@@ -202,8 +220,63 @@ main {
 }
 
 
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        min-height: 100svh;
+    }
 
+    .app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-sizing: border-box;
+        margin: 2.5rem;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        max-width: 920px;
+    }
 
+    .input-content {
+        display: inherit;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 1rem;
+    }
 
+    .tip-button-group {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
+    .tip-calc {
+        gap: 3rem;
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+        justify-content: space-between;
+    }
 
+    .amounts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .tip-amount-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tip-amount-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cost-text {
+        font-size: 3rem;
+    }
+
+}
