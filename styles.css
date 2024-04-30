@@ -109,6 +109,10 @@ main {
     border: 2px solid var(--strng-cyan);
 }
 
+.error-input {
+    border: 2px solid #ff3a3a;
+}
+
 .tip {
     display: flex;
     flex-direction: column;
@@ -146,6 +150,21 @@ main {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+}
+
+.error {
+    font-size: 1rem;
+    color: #ff3a3a;
+}
+
+.disabled {
+    display: none;
+}
+
+.label-and-error-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .tip-calc {

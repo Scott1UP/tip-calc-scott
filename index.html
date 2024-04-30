@@ -37,7 +37,10 @@
         </section>
 
         <section class="number-of-people">
-          <label for="people" class="input-title">Number of People</label>
+          <div class="label-and-error-text">
+            <label for="people" class="input-title">Number of People</label>
+            <p class="error disabled">Can't be zero</p>
+          </div>
           <div class="icon-input">
             <img src="./images/icon-person.svg" class="icon" alt="Person icon.">
             <input type="text" id="peopleField" class="input" name="people">

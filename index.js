@@ -40,6 +40,8 @@ resetBtn.addEventListener("click", event => {
     numberOfPeople.value = "";
     customTip.value = "";
     document.querySelector(".tip-btn.active").classList.remove("active");
+    document.querySelector(".error").classList.add("disabled");
+    document.querySelector(".number-of-people .icon-input").classList.remove("error-input");
     tipAmountPerPerson.textContent = "$0.00";
     totalPerPerson.textContent = "$0.00";
 });
@@ -49,12 +51,31 @@ const checkValidity = () => {
   return billAmount.value.trim() !== "" && numberOfPeople.value.trim() !== "" && (customTip.value.trim() !== "" || document.querySelector(".tip-btn.active") !== null);
 }
 
+// Function to check if the number of people is not zero
+const checkNotZero = () => {
+  if (parseFloat(numberOfPeople.value) === 0) {
+    document.querySelector(".error").classList.remove("disabled");
+    document.querySelector(".number-of-people .icon-input").classList.add("error-input");
+    return false;
+  } 
+  else {
+    document.querySelector(".error").classList.add("disabled");
+    document.querySelector(".number-of-people .icon-input").classList.remove("error-input");
+    return true;
+  }
+}
+
 // Function to update calculations
 const updateCalculations = () => {
-  if (checkValidity()) {
-    let tipPercentage;
+  if (checkValidity() && checkNotZero()) {
 
+    // Reset error and input style when number of people is valid
+    document.querySelector(".error").classList.add("disabled");
+    document.querySelector(".number-of-people .icon-input").classList.remove("error-input");
+
+    let tipPercentage;
     const activeTipButton = document.querySelector(".tip-btn.active");
+    
     if (activeTipButton) {
       tipPercentage = parseFloat(activeTipButton.value) / 100;
     } 
