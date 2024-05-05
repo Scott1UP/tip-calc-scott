@@ -18,13 +18,13 @@ body {
     font-family: "Space Mono";
     font-size: 1.5rem;
     color: var(--dk-cyan);
+    background: var(--lt-gray-cyan);
 }
   
 /* Mobile styles */
 main {
     display: flex;
     flex-direction: column;
-    background: var(--lt-gray-cyan);
 }
 
 .logo {
@@ -245,6 +245,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: -2.5rem;
         min-height: 100vh;
         min-height: 100svh;
     }
@@ -257,6 +258,7 @@ main {
         padding: 2rem;
         border-radius: 1.5rem;
         max-width: 920px;
+        box-shadow: 0px 16px 32px rgba(0, 73, 77, 0.176);
     }
 
     .input-content {
