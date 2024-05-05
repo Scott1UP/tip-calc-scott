@@ -31,7 +31,12 @@ tipButtons.forEach(button => {
 
 // Remove any active button states
 customTip.addEventListener("click", event => {
-  document.querySelector(".tip-btn.active").classList.remove("active");
+  if (document.querySelector(".tip-btn.active")) {
+    document.querySelector(".tip-btn.active").classList.remove("active");
+  }
+  else {
+    return;
+  }
 });
 
 // Reset all calculator values
@@ -39,9 +44,14 @@ resetBtn.addEventListener("click", event => {
     billAmount.value = "";
     numberOfPeople.value = "";
     customTip.value = "";
-    document.querySelector(".tip-btn.active").classList.remove("active");
+
+    if (document.querySelector(".tip-btn.active")) {
+      document.querySelector(".tip-btn.active").classList.remove("active");
+    }
     document.querySelector(".error").classList.add("disabled");
     document.querySelector(".number-of-people .icon-input").classList.remove("error-input");
+    console.log(tipAmountPerPerson.textContent);
+    console.log(totalPerPerson.textContent);
     tipAmountPerPerson.textContent = "$0.00";
     totalPerPerson.textContent = "$0.00";
 });
